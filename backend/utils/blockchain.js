@@ -1,3 +1,17 @@
+const requiredEnvVars = [
+  "POLYGON_RPC_URL",
+  "CFD_TOKEN_ADDRESS",
+  "AFFILIATE_MANAGER_ADDRESS",
+  "ICO_PHASE1_ADDRESS",
+  "USDT_ADDRESS",
+  "ADMIN_WALLET_ADDRESS"
+];
+
+for (const key of requiredEnvVars) {
+  if (!process.env[key]) {
+    throw new Error(`Variável de ambiente ausente: ${key}`);
+  }
+}
 const { ethers } = require('ethers');
 const { CFD_TOKEN_ABI, AFFILIATE_MANAGER_ABI, ICO_PHASE1_ABI, USDT_ABI } = require('../contracts/abis');
 
