@@ -22,25 +22,25 @@ class BlockchainService {
     
     // Contratos
     this.cfdTokenContract = new ethers.Contract(
-      process.env.CFD_TOKEN_CONTRACT,
+      process.env.CFD_TOKEN_ADDRESS,
       CFD_TOKEN_ABI,
       this.provider
     );
     
     this.affiliateManagerContract = new ethers.Contract(
-      process.env.AFFILIATE_MANAGER_CONTRACT,
+      process.env.AFFILIATE_MANAGER_ADDRESS,
       AFFILIATE_MANAGER_ABI,
       this.provider
     );
     
     this.icoPhase1Contract = new ethers.Contract(
-      process.env.ICO_PHASE1_CONTRACT,
+      process.env.ICO_PHASE1_ADDRESS,
       ICO_PHASE1_ABI,
       this.provider
     );
     
     this.usdtContract = new ethers.Contract(
-      process.env.USDT_CONTRACT,
+      process.env.USDT_ADDRESS,
       USDT_ABI,
       this.provider
     );
